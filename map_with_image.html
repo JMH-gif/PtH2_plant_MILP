@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b50c600cf4bbc0e1ad5c3f0201ebf67d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b50c600cf4bbc0e1ad5c3f0201ebf67d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b50c600cf4bbc0e1ad5c3f0201ebf67d = L.map(
+                "map_b50c600cf4bbc0e1ad5c3f0201ebf67d",
+                {
+                    center: [53.113712, -4.029927],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": null,
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2335c85dcc6f4155224a45abd83621eb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2335c85dcc6f4155224a45abd83621eb.addTo(map_b50c600cf4bbc0e1ad5c3f0201ebf67d);
+        
+    
+            var marker_085fa8b9b33bed899c25c2a13178300b = L.marker(
+                [53.113712, -4.029927],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_b50c600cf4bbc0e1ad5c3f0201ebf67d);
+        
+    
+        var popup_36a208b5d3856de5edaf0bdaa31f0ea7 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_e6c9919b5229a66156dce2f948068b90 = $(`<div id="html_e6c9919b5229a66156dce2f948068b90" style="width: 100.0%; height: 100.0%;"> <b>Place to Visit</b><br> <img src="https://www.bing.com/th/id/OBTQ.BT54FE972EE2A83DBCB347EB4AFA838C42604CB21DB7FF9D66D68BDC5E15BC843E?qlt=90&pid=InlineBlock" width="200"><br> A beautiful place with amazing scenery! </div>`)[0];
+                popup_36a208b5d3856de5edaf0bdaa31f0ea7.setContent(html_e6c9919b5229a66156dce2f948068b90);
+            
+        
+
+        marker_085fa8b9b33bed899c25c2a13178300b.bindPopup(popup_36a208b5d3856de5edaf0bdaa31f0ea7)
+        ;
+
+        
+    
+    
+            marker_085fa8b9b33bed899c25c2a13178300b.bindTooltip(
+                `<div>
+                     Click for details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fda749a856c0b52eeb2bbdfc7427ea50 = L.marker(
+                [64.8667, -24.0333],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_b50c600cf4bbc0e1ad5c3f0201ebf67d);
+        
+    
+        var popup_dabedca361f8df3c214b4da7f8dbaff1 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_cb80e63d22fcaa3a408b337d319b36eb = $(`<div id="html_cb80e63d22fcaa3a408b337d319b36eb" style="width: 100.0%; height: 100.0%;"> <b>Place to Visit</b><br> <img src="https://www.locationscout.net/iceland/47903-svoertuloft-lighthouse" width="200"><br> A beautiful place with amazing scenery! </div>`)[0];
+                popup_dabedca361f8df3c214b4da7f8dbaff1.setContent(html_cb80e63d22fcaa3a408b337d319b36eb);
+            
+        
+
+        marker_fda749a856c0b52eeb2bbdfc7427ea50.bindPopup(popup_dabedca361f8df3c214b4da7f8dbaff1)
+        ;
+
+        
+    
+    
+            marker_fda749a856c0b52eeb2bbdfc7427ea50.bindTooltip(
+                `<div>
+                     Click for details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8690ddfacb11101d1416e8e6022f0166 = L.marker(
+                [37.29028, 13.58639],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_b50c600cf4bbc0e1ad5c3f0201ebf67d);
+        
+    
+        var popup_b4f183711ab3883f95eff1a28e9ec125 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_fa99ce3e634012be2086a49f5991eab8 = $(`<div id="html_fa99ce3e634012be2086a49f5991eab8" style="width: 100.0%; height: 100.0%;">https://www.bing.com/spotlight?spotlightid=ValleyOfTemplesSicily&msclkid=a8d196887b111cc83d59f1e3c255e920&q=valley%20of%20the%20temples%20sicily&carindexpill=0&carindeximg=0&textorimgcar=img&isfullscreen=true&carscrlimgv2=0&form=SLVFUL&ssid=09e8f885-427b-8850-947d-202e0287b9e8&trsid=NONE&chevclk=false</div>`)[0];
+                popup_b4f183711ab3883f95eff1a28e9ec125.setContent(html_fa99ce3e634012be2086a49f5991eab8);
+            
+        
+
+        marker_8690ddfacb11101d1416e8e6022f0166.bindPopup(popup_b4f183711ab3883f95eff1a28e9ec125)
+        ;
+
+        
+    
+    
+            marker_8690ddfacb11101d1416e8e6022f0166.bindTooltip(
+                `<div>
+                     Click for details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
