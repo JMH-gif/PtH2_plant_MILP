@@ -621,9 +621,9 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
         ax1.step(time, elec_sales, label="Electricity Sold to Grid", color="orange", alpha=0.8, where='mid')
         ax1.step(time, electrolyzer_intake, label="Electrolyzer Intake", color="green", alpha=0.8, where='mid')
 
-        ax1.set_xlabel("Time (hours)", fontsize=14 * text_scaling_factor)
-        ax1.set_ylabel("Electricity (MWh)", fontsize=14 * text_scaling_factor)
-        ax1.set_title("Energy Flows with Maximum Limits", fontsize=16 * text_scaling_factor)
+        ax1.set_xlabel("Time (hours)", fontsize=16 * text_scaling_factor)
+        ax1.set_ylabel("Electricity (MWh)", fontsize=16 * text_scaling_factor)
+        ax1.set_title("Energy Flows with Maximum Limits", fontsize=18 * text_scaling_factor)
 
         # Add y-axis markers for max battery discharge rate and max electrolyzer intake
         ax1.annotate(
@@ -633,7 +633,7 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
             textcoords="offset points",
             xytext=(-5, 0),  # Position directly under black tick numbers
             color="red",
-            fontsize=12,  # Match size with tick numbers
+            fontsize=14,  # Match size with tick numbers
             ha="center",  # Center align the text
             #arrowprops=dict(arrowstyle="-", color="red", lw=0.8)
         )
@@ -645,7 +645,7 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
             textcoords="offset points",
             xytext=(-8, 0),  # Position directly under black tick numbers
             color="green",
-            fontsize=12,  # Match size with tick numbers
+            fontsize=14,  # Match size with tick numbers
             ha="center",  # Center align the text
             #arrowprops=dict(arrowstyle="-", color="green", lw=0.8)
         )
@@ -653,16 +653,16 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
         # Grid price on the second y-axis
         ax2 = ax1.twinx()
         ax2.plot(time, grid_price, label="Grid Price", color="black", linestyle="-", alpha=0.8)
-        ax2.set_ylabel("Grid Price (€/MWh)", fontsize=14 * text_scaling_factor)
-        ax2.tick_params(axis='both', labelsize=12 * text_scaling_factor)
-        ax2.legend(loc="upper right", fontsize=12 * text_scaling_factor)
+        ax2.set_ylabel("Grid Price (€/MWh)", fontsize=16 * text_scaling_factor)
+        ax2.tick_params(axis='both', labelsize=14 * text_scaling_factor)
+        ax2.legend(loc="upper right", fontsize=14 * text_scaling_factor)
 
         # Grid price on the second y-axis
         ax2 = ax1.twinx()
         ax2.plot(time, grid_price, label="Grid Price", color="black", linestyle="-", alpha=0.8)
-        ax2.set_ylabel("Grid Price (€/MWh)", fontsize=14 * text_scaling_factor)
-        ax2.tick_params(axis='both', labelsize=12 * text_scaling_factor)
-        ax2.legend(loc="upper right", fontsize=12 * text_scaling_factor)
+        ax2.set_ylabel("Grid Price (€/MWh)", fontsize=16 * text_scaling_factor)
+        ax2.tick_params(axis='both', labelsize=14 * text_scaling_factor)
+        ax2.legend(loc="upper right", fontsize=14 * text_scaling_factor)
 
         # Force plot limits to update
         plt.draw()
@@ -671,9 +671,9 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
         # Add season labels at the top
         for (start, end, season) in season_boundaries:
             ax1.text((start + end) / 2, ylim_top * 0.95, season,
-                     ha='center', va='top', fontsize=12 * text_scaling_factor, fontweight='bold', color='black')
+                     ha='center', va='top', fontsize=14 * text_scaling_factor, fontweight='bold', color='black')
 
-        ax1.legend(loc="upper left", fontsize=12 * text_scaling_factor)
+        ax1.legend(loc="upper left", fontsize=14 * text_scaling_factor)
         plt.tight_layout()
         plt.savefig(r"C:\Users\Mika\Desktop\Master\Pictures_Master\plot_energy_flows_and_grid_price.png", bbox_inches="tight", dpi=300)
         plt.show()

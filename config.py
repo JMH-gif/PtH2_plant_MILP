@@ -6,7 +6,7 @@ time_period_length =   168*4*num_representative_weeks # One representative week
 use_condensed_weeks = True
 # Toggle for generating plots and tables in the model file for analysis purposes
 # General flags
-generate_tables = True
+generate_tables = False
 generate_plots = True
 
 # Specific table flags
@@ -31,7 +31,7 @@ generate_energy_requirements_plot = False
 generate_cost_revenue_plot = False
 generate_flh_plot = False
 generate_utilization_and_cycles_plot = False
-plot_energy_flows_and_grid_price = False
+plot_energy_flows_and_grid_price = True
 
 go_quadratic = True
 analyse = False
