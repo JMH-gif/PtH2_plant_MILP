@@ -624,6 +624,7 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
         ax1.set_xlabel("Time (hours)", fontsize=16 * text_scaling_factor)
         ax1.set_ylabel("Electricity (MWh)", fontsize=16 * text_scaling_factor)
         ax1.set_title("Energy Flows with Maximum Limits", fontsize=18 * text_scaling_factor)
+        ax1.tick_params(axis='both', labelsize=14 * text_scaling_factor)
 
         # Add y-axis markers for max battery discharge rate and max electrolyzer intake
         ax1.annotate(
@@ -649,13 +650,6 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
             ha="center",  # Center align the text
             #arrowprops=dict(arrowstyle="-", color="green", lw=0.8)
         )
-
-        # Grid price on the second y-axis
-        ax2 = ax1.twinx()
-        ax2.plot(time, grid_price, label="Grid Price", color="black", linestyle="-", alpha=0.8)
-        ax2.set_ylabel("Grid Price (€/MWh)", fontsize=16 * text_scaling_factor)
-        ax2.tick_params(axis='both', labelsize=14 * text_scaling_factor)
-        ax2.legend(loc="upper right", fontsize=14 * text_scaling_factor)
 
         # Grid price on the second y-axis
         ax2 = ax1.twinx()
