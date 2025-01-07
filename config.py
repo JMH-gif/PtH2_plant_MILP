@@ -41,7 +41,7 @@ c_rate = 0.5 # for the battery
 include_min_prod_lvl_electrolyzer = True
 include_startup_cost_electrolyzer = True
 include_el_grid_connection_fee = True
-startup_cost_electrolyzer = [1500, 2500]  # Adjust as needed (€)
+startup_cost_electrolyzer = [1500, 2600]  # Adjust as needed (€)
 # Minimum production bounds as a percentage of installed capacity
 min_prod_lvl_bounds_electrolyzer = [0.10, 0.20]  # 10% to 20%
 
