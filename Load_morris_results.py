@@ -36,14 +36,14 @@ df = df / 1000
 # Assuming your DataFrame is named 'df'
 df_sorted = df.sort_values(by='mu_star', ascending=False)
 # Round all values in the DataFrame to the closest integer
-df_rounded = df_sorted.round(0)
-# Display the sorted DataFrame
-print(df_rounded)
 # Plotting
 # Remove 'gas_grid_connection_fee' from the dataframe
 
 df = df_sorted.drop('gas_grid_connection_fee')
 
+
+
+# Plotting with centered error bars and LaTeX formatting for both mu_star and sigma
 
 
 # Plotting with centered error bars and LaTeX formatting for both mu_star and sigma
@@ -59,15 +59,15 @@ plt.bar(x + bar_width / 2, df['sigma'], width=bar_width, label=r'$\sigma$')
 plt.errorbar(x - bar_width / 2, df['mu_star'], yerr=df['mu_star_conf'], fmt='none', ecolor='black', capsize=3)
 
 # Labeling and formatting
-plt.xlabel('Parameters', fontsize=14)
-plt.ylabel('Value (€/kg)', fontsize=14)
-plt.title('Morris Method Sensitivity Analysis Results (€/kg)', fontsize=16)
-plt.xticks(x, df.index, rotation=90, fontsize=12)
-plt.yticks(fontsize=12)
-plt.legend(fontsize=12)
+plt.xlabel('Parameters', fontsize=16)
+plt.ylabel('Value (€/kg)', fontsize=16)
+plt.title('Morris Method Sensitivity Analysis Results (€/kg)', fontsize=18)
+plt.xticks(x, df.index, rotation=90, fontsize=14)
+plt.yticks(fontsize=14)
+plt.legend(fontsize=14)
 plt.grid(True)
-
 plt.tight_layout()
+plt.savefig('plot.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Convert data to €/kg by dividing by 1000

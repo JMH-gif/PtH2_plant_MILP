@@ -612,9 +612,9 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
             ax1.axvspan(start, end, color=color, alpha=0.2, label='_nolegend_')
 
         # Plot the main energy data
-        ax1.fill_between(time, solar_prod, label="Solar Production", color="gold", alpha=0.6, step='mid')
-        ax1.fill_between(time, solar_prod + wind_prod, solar_prod, label="Wind Production", color="skyblue", alpha=0.6,
-                         step='mid')
+        ax1.fill_between(time, solar_prod, label="Solar Production", color="gold", alpha=0.6, step = 'mid')
+        ax1.fill_between(time, solar_prod + wind_prod, solar_prod, label="Wind Production", color="skyblue", alpha=0.6,step='mid')
+        #ax1.fill_between(time, wind_prod, label="Wind Production", color="skyblue", alpha=0.6, step = 'mid')
         ax1.step(time, battery_charge, label="Battery Charge", color="blue", alpha=0.7, where='mid', linestyle="--")
         ax1.step(time, battery_discharge, label="Battery Discharge", color="red", alpha=0.7, where='mid',
                  linestyle="--")
@@ -653,7 +653,8 @@ def plot_energy_flows_and_grid_price(results, config, text_scaling_factor=1.0):
 
         # Grid price on the second y-axis
         ax2 = ax1.twinx()
-        ax2.plot(time, grid_price, label="Grid Price", color="black", linestyle="-", alpha=0.8)
+        #ax2.plot(time, grid_price, label="Grid Price", color="black", linestyle="-", alpha=0.4, where ='mid')
+        ax2.step(time, grid_price, label="Grid Price", color="black", linestyle="-", alpha=0.4, where='mid')
         ax2.set_ylabel("Grid Price (€/MWh)", fontsize=16 * text_scaling_factor)
         ax2.tick_params(axis='both', labelsize=14 * text_scaling_factor)
         ax2.legend(loc="upper right", fontsize=14 * text_scaling_factor)
