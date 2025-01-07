@@ -380,7 +380,7 @@ def setup_model(global_params=None, time_varying_scenario=None, generate_tables=
             'electrolyzer_max_intake': P_invest['electrolyzer'].x
         }
         print(P_invest['electrolyzer'].x*0.2)
-        print("Test change for Git commit and pussadsadasdasdadsadah!")
+        print("Test change for Git commit and pussasdasdasdasdasdasdasadsadasdasdadsadah!")
         financial_results = calculate_financial_results_from_results(results, OPEX, CAPEX, Annuity_factors, scaling_factor, water_price, water_demand, o2_price, usage_fee)
         if include_startup_cost_electrolyzer:
             startup_cost_term =gp.quicksum(u_electrolyzer_start[t].x * startup_cost_electrolyzer for t in T)
